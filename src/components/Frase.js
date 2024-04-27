@@ -1,13 +1,13 @@
 
-
+import styles from './Frase.module.css'
 
 function Frase(){
 
 
     return(
-    <div className="frase">
+    <div className={styles.fraseContainer}>
     
-    <h1>Aqui falamos de frases</h1>
+    <h1 className={styles.fraseContent}>Aqui falamos de frases</h1>
     </div>
     )
     
