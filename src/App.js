@@ -1,24 +1,20 @@
 import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './components/HelloWorld';
-
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
-
-  const name ='Artur'
-  const newname = name.toLocaleUpperCase()
- function multiplicar(a,b){
-  return a*b
- }
- const url = "https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg"
+const nome = "Maria"
+  
   return (
     <div className="App">
-<h1> Ola d</h1>
-<p> Olá !!!, {name}</p>
-<p> Soma: {multiplicar(20, 34)}</p>
-<img src={url} alt="minha imagem" width="50%" heigth="50%"/>
-<HelloWorld/>
 
+<HelloWorld/>
+<SayMyName nome="Artur"/>
+<SayMyName nome="Tiago"/>
+<SayMyName nome={nome}/>
+<Pessoa nome="artur" foto="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg" idade="20" profissao="Programador"/>
     </div>
 
 
