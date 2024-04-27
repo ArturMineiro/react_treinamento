@@ -2,22 +2,20 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+
+  const name ='Artur'
+  const newname = name.toLocaleUpperCase()
+ function multiplicar(a,b){
+  return a*b
+ }
+ const url = "https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg"
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+<h1> Ola d</h1>
+<p> Olá !!!, {name}</p>
+<p> Soma: {multiplicar(20, 34)}</p>
+<img src={url} alt="minha imagem" width="50%" heigth="50%"/>
+
     </div>
   );
 }
