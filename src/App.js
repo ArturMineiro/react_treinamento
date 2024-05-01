@@ -5,6 +5,9 @@ import SayMyName from './components/SayMyName';
 import Pessoa from './components/Pessoa';
 import Frase from './components/Frase';
 import List from './components/List';
+import Evento from './components/Evento';
+import Form from './components/Form';
+
 
 
 function App() {
@@ -22,6 +25,11 @@ const nome = "Maria"
 <Pessoa nome="artur" foto="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg" idade="20" profissao="Programador"/>
 <List/>
 
+<h1> Testando eventos</h1>
+<Evento numero="1"/>
+<Evento numero="2"/>
+
+<Form/>
     </div>
 
 
