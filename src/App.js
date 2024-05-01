@@ -9,11 +9,13 @@ import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
 import OutraLista from './components/OutraLista';
-
+import {useState} from 'react'
+import SeuNome from './components/SeuNome';
+import Saudacao from './components/Saudacao';
 
 function App() {
-const nome = "Maria"
-
+//const nome = "Maria"
+const [nome,setNome] = useState()
 const meusItens = ['React', 'Vue', 'Angular']
 console.log(meusItens)
   return (
@@ -22,10 +24,10 @@ console.log(meusItens)
  <Frase/>
  <Frase/>
 <HelloWorld/>
-<SayMyName nome="Artur"/>
-<SayMyName nome="Tiago"/>
-<SayMyName nome={nome}/>
-<Pessoa nome="artur" foto="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg" idade="20" profissao="Programador"/>
+{/* <SayMyName nome="Artur" />
+  <SayMyName nome="Tiago" />
+  <SayMyName nome={nome} />
+  <Pessoa nome="artur" foto="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg" idade="20" profissao="Programador" /> */}
 <List/>
 
 <h1> Testando eventos</h1>
@@ -44,7 +46,12 @@ console.log(meusItens)
 <OutraLista itens={meusItens}/>
 <OutraLista itens={[]}/>
 
-    </div>
+
+<h1>State Lift</h1>
+<SeuNome setNome={setNome}/>
+<Saudacao nome={nome}/> 
+   </div>
+   
 
 
   );
