@@ -8,11 +8,14 @@ import List from './components/List';
 import Evento from './components/Evento';
 import Form from './components/Form';
 import Condicional from './components/Condicional';
+import OutraLista from './components/OutraLista';
 
 
 function App() {
 const nome = "Maria"
-  
+
+const meusItens = ['React', 'Vue', 'Angular']
+console.log(meusItens)
   return (
     <div className="App">
  <h1>teste</h1>
@@ -32,12 +35,20 @@ const nome = "Maria"
 <Form/>
 
 <br/>
+
 <h1>Rendelizção condicional</h1>
 <Condicional/>
+
+
+<h1>Rendelizção de listas</h1>
+<OutraLista itens={meusItens}/>
+<OutraLista itens={[]}/>
+
     </div>
 
 
   );
+ 
 }
 
 export default App;
