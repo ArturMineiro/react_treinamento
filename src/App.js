@@ -7,7 +7,7 @@ import Frase from './components/Frase';
 import List from './components/List';
 import Evento from './components/Evento';
 import Form from './components/Form';
-
+import Condicional from './components/Condicional';
 
 
 function App() {
@@ -30,6 +30,10 @@ const nome = "Maria"
 <Evento numero="2"/>
 
 <Form/>
+
+<br/>
+<h1>Rendelizção condicional</h1>
+<Condicional/>
     </div>
 
 
