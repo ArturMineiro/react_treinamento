@@ -12,13 +12,48 @@ import OutraLista from './components/OutraLista';
 import {useState} from 'react'
 import SeuNome from './components/SeuNome';
 import Saudacao from './components/Saudacao';
+import {BrowserRouter as Router, Routes ,Route,Link} from 'react-router-dom'
+import Home from './pages/Home';
+import Empresa from './pages/Empresa';
+import Contato from './pages/Contato';
+
 
 function App() {
+  
+  return( 
+  
+    <Router>
+    <ul>
+      <li><Link to="/"> Home</Link></li>
+      <li><Link to="/empresa"> Empresa</Link></li>
+      <li><Link to="/contato"> Contato</Link></li>
+    </ul>
+
+      <Routes>
+          <Route  path="/" exact='true' element={<Home />} />
+          <Route  path="/empresa" element={<Empresa />} />
+          <Route  path="/contato" element={<Contato />} />
+      </Routes>
+
+  </Router>
+ )
+
+}
+
+export default App;
+
+
+
+
+
+   /* 
 //const nome = "Maria"
 const [nome,setNome] = useState()
 const meusItens = ['React', 'Vue', 'Angular']
 console.log(meusItens)
   return (
+
+    { 
     <div className="App">
  <h1>teste</h1>
  <Frase/>
@@ -27,7 +62,7 @@ console.log(meusItens)
 {/* <SayMyName nome="Artur" />
   <SayMyName nome="Tiago" />
   <SayMyName nome={nome} />
-  <Pessoa nome="artur" foto="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg" idade="20" profissao="Programador" /> */}
+  <Pessoa nome="artur" foto="https://cdn.pixabay.com/photo/2022/11/28/17/47/cosmos-7622740_1280.jpg" idade="20" profissao="Programador" /> }
 <List/>
 
 <h1> Testando eventos</h1>
@@ -55,7 +90,4 @@ console.log(meusItens)
 
 
   );
- 
-}
-
-export default App;
+*/
